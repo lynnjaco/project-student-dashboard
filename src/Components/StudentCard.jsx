@@ -1,11 +1,11 @@
-export const StudentCard = (props) => {
+export const StudentCard = ( student ) => {
 
     function buildStudentName(object){
         return `${object.names.preferredName} ${object.names.middleName[0]} ${object.names.surname}`;
     }
 
     return (
-        <div>
+        <li>
             <div>
                 <img src={ student.profilePhoto } alt="student profile photo"></img>
             </div>
@@ -17,6 +17,6 @@ export const StudentCard = (props) => {
                 </div>
                 <p>Show More...</p>
             </div>
-        </div>
+        </li>
     )
 }
