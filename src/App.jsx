@@ -8,10 +8,9 @@ import data from "./data/data.json";
 function App() {
   return (
     <div>
-      <header>
+      <header className="dashboard-header">
         <Header />
       </header>
-
       <main>
         <div>
           <h3>Choose a Class by Start Date</h3>
