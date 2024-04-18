@@ -14,10 +14,19 @@ main {
 
 ul {
     list-style: none;
+    padding: 0;
 }
 
 hr {
     border: 1px solid var(--green-accent-color);
+}
+
+.green-text {
+    color: #5c946e;
+}
+
+.underlined{
+    text-decoration: underline;
 }
 
 .dashboard-header {
@@ -43,5 +52,8 @@ hr {
     p {
         font-weight: bolder;
     }
+}
 
+.students-container {
+    padding: 0px 50px;
 }
