@@ -17,7 +17,7 @@ function App() {
           <CohortStartDates students={ data }/>
         </div>
         <div className="students-container">
-          <CohortStudentCount />
+          <CohortStudentCount students={ data } />
           <StudentList students={ data }/>
         </div>
       </main>

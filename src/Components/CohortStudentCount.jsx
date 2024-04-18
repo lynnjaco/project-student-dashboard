@@ -1,8 +1,10 @@
-export const CohortStudentCount = () => {
+import "./CohortStudentCount.css"
+
+export const CohortStudentCount = ({ students }) => {
     return (
-        <div>
+        <div className="cohort-student-count-container">
             <h2>All Students</h2>
-            <p>Total Students: <span className="green-text">250</span></p>
+            <p>Total Students: <span className="green-text">{ students.length }</span></p>
         </div>
     )
 }

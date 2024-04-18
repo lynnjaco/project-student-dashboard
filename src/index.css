@@ -33,11 +33,14 @@ hr {
     background-color: var(--green-accent-color);
     color: white;
     height: 125px;
-    text-align: center;
-    display: flex;
-    align-items: center;
+    display: flex;    
     justify-content: center;
     margin-bottom: 40px;
+
+    h1 {
+        margin: 40px 0px 50px 0px;
+    }
+   
 }
 
 .cohorts-container{
@@ -47,10 +50,13 @@ hr {
 
     h2 {
         text-align: center;
+        margin-top: 0;
+        margin-bottom: 30px;
     }
 
     p {
         font-weight: bolder;
+        padding-left: 10px;
     }
 }
 
