@@ -1,6 +1,6 @@
 import { StudentCard } from "./StudentCard"
 
-export const StudentList = ( students ) => {
+export const StudentList = ( { students } ) => {
     return (
         <>
             <ul>

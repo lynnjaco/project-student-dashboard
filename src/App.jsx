@@ -1,7 +1,9 @@
+import React from "react";
 import { CohortStartDates } from "./Components/CohortStartDates";
 import { Header } from "./Components/Header";
 import { StudentList } from "./Components/StudentList";
-import data from "./data/data.json"
+import { CohortStudentCount } from "./Components/CohortStudentCount";
+import data from "./data/data.json";
 
 function App() {
   return (
@@ -16,7 +18,7 @@ function App() {
         </div>
         <div>
           <CohortStudentCount />
-          <StudentList />
+          <StudentList students={ data }/>
         </div>
       </main>
     </div>

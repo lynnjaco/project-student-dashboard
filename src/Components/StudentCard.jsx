@@ -1,7 +1,7 @@
-export const StudentCard = ( student ) => {
+export const StudentCard = ( { student } ) => {
 
     function buildStudentName(object){
-        return `${object.names.preferredName} ${object.names.middleName[0]} ${object.names.surname}`;
+        return `${object.names.preferredName} ${object.names.middleName[0]}. ${object.names.surname}`;
     }
 
     return (
