@@ -12,8 +12,8 @@ function App() {
         <Header />
       </header>
       <main>
-        <div>
-          <h3>Choose a Class by Start Date</h3>
+        <div className="cohorts-container">
+          <h2>Choose a Class by Start Date</h2>
           <CohortStartDates students={ data }/>
         </div>
         <div>

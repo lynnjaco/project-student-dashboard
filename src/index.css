@@ -2,10 +2,24 @@
     --green-accent-color: #5c946e;
 }
 
-body{
+body {
     margin: 0;
     font-family: sans-serif;
 }
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+ul {
+    list-style: none;
+}
+
+hr {
+    border: 1px solid var(--green-accent-color);
+}
+
 .dashboard-header {
     background-color: var(--green-accent-color);
     color: white;
@@ -15,4 +29,19 @@ body{
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
+}
+
+.cohorts-container{
+    width: 450px;
+    padding: 0px 30px;
+    margin-right: 15px;
+
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        font-weight: bolder;
+    }
+
 }
