@@ -46,17 +46,22 @@
     }
 
     p {
-        margin: 0;
+        margin: 5px 0px;
     }
 
 }
 
 .student-performance-container {
-    display: flex;
+    display: none;
     flex-direction: row;
+    margin-top: 0;
 
     p {
         color: #5c946e;
+    }
+
+    h3{
+        margin-top: 0;
     }
 }
 

@@ -1,11 +1,28 @@
 import "./StudentCard.css"
 
+
+
 export const StudentCard = ( { student } ) => {
 
     function buildStudentName(object){
         return `${object.names.preferredName} ${object.names.middleName[0]}. ${object.names.surname}`;
     }
 
+    function formatDate(inputDate) {
+        let birthdate = new Date(inputDate);
+        
+        let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        
+        let month = months[birthdate.getMonth()];
+        let day = birthdate.getDate();
+        let year = birthdate.getFullYear();
+        
+        let formattedDate = `${month} ${day}, ${year}`;
+        
+        return formattedDate;
+    }
+
+    
     return (
         <li>
             <div className="student-card-container">
@@ -17,9 +34,10 @@ export const StudentCard = ( { student } ) => {
                         <div className="student-info-container">
                             <h3>{ buildStudentName(student) }</h3>
                             <p>{ student.username }</p>
-                            <p className="green-text">Birthday: <span>{ student.dob }</span></p>
+                            <p className="green-text">Birthday: <span>{ formatDate(student.dob) }</span></p>
                         </div>
                         <p className="green-text underlined">Show More...</p>
+                        {/* onClick - student-performance-container.style.display === "flex" ? student-performance-container.style.display = "none" */}
                     </div>
                 </div>
                
