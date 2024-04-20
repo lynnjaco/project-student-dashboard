@@ -52,8 +52,12 @@
 }
 
 .student-performance-container {
-    display: none;
+    display: flex;
     flex-direction: row;
+
+    p {
+        color: #5c946e;
+    }
 }
 
 .certs-list-container {
@@ -67,3 +71,4 @@
 .codewars-list-container {
     margin-left: 20px; 
 }
+
