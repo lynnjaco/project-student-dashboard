@@ -8,20 +8,23 @@ export const StudentCard = ( { student } ) => {
 
     return (
         <li>
-            <div className="student-profile-container">
-                <div className="profile-photo-container">
-                    <img src={ student.profilePhoto } alt="student profile photo"></img>
-                </div>
-                <div className="profile-details-container">
-                    <div className="student-info-container">
-                        <h3>{ buildStudentName(student) }</h3>
-                        <p>{ student.username }</p>
-                        <p className="green-text">Birthday: <span>{ student.dob }</span></p>
+            <div className="student-card-container">
+                <div className="student-profile-container">
+                    <div className="profile-photo-container">
+                        <img src={ student.profilePhoto } alt="student profile photo"></img>
                     </div>
-                    <p className="green-text underlined">Show More...</p>
+                    <div className="profile-details-container">
+                        <div className="student-info-container">
+                            <h3>{ buildStudentName(student) }</h3>
+                            <p>{ student.username }</p>
+                            <p className="green-text">Birthday: <span>{ student.dob }</span></p>
+                        </div>
+                        <p className="green-text underlined">Show More...</p>
+                    </div>
                 </div>
-                <div>
-                    <div>
+               
+                <div className="student-performance-container">
+                    <div className="codewars-list-container">
                         <h3>Codewars:</h3>
                         <ul>
                             <li>
@@ -38,7 +41,7 @@ export const StudentCard = ( { student } ) => {
                             </li>
                         </ul>
                     </div>
-                    <div>
+                    <div className="scores-list-container">
                         <h3>Scores</h3>
                             <ul>
                                 <li>
@@ -52,7 +55,7 @@ export const StudentCard = ( { student } ) => {
                                 </li>
                             </ul>
                     </div>
-                    <div>
+                    <div className="certs-list-container">
                         <h3>Certifications</h3>
                             <ul>
                                 <li>
