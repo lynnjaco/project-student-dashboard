@@ -10,8 +10,7 @@ export const StudentCard = ( { student } ) => {
 
     function formatDate(inputDate) {
         let birthdate = new Date(inputDate);
-        
-        let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         
         let month = months[birthdate.getMonth()];
         let day = birthdate.getDate();
