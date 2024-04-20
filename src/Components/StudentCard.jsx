@@ -43,13 +43,13 @@ export const StudentCard = ( { student } ) => {
                     <h3>Scores</h3>
                         <ul>
                             <li>
-                                <p>Assignments: <span>{}</span></p>
+                                <p>Assignments: <span>{ student.cohort.scores.assignments * 100 }%</span></p>
                             </li>
                             <li>
-                                <p>Projects: <span>{}</span></p>
+                                <p>Projects: <span>{ student.cohort.scores.projects * 100 }%</span></p>
                             </li>
                             <li>
-                                <p>Assessments: <span>{}</span></p>
+                                <p>Assessments: <span>{ student.cohort.scores.assessments * 100 }%</span></p>
                             </li>
                         </ul>
                 </div>
