@@ -1,4 +1,5 @@
 import "./StudentCard.css"
+import { useState } from "react";
 
 
 
@@ -9,18 +10,19 @@ export const StudentCard = ( { student } ) => {
     }
 
     function formatDate(inputDate) {
-        let birthdate = new Date(inputDate);
+        const birthdate = new Date(inputDate);
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         
-        let month = months[birthdate.getMonth()];
-        let day = birthdate.getDate();
-        let year = birthdate.getFullYear();
+        const month = months[birthdate.getMonth()];
+        const day = birthdate.getDate();
+        const year = birthdate.getFullYear();
         
         let formattedDate = `${month} ${day}, ${year}`;
         
         return formattedDate;
     }
 
+    const [showMore, setShowMore] = useState(false);
     
     return (
         <li>
@@ -35,8 +37,7 @@ export const StudentCard = ( { student } ) => {
                             <p>{ student.username }</p>
                             <p className="green-text">Birthday: <span>{ formatDate(student.dob) }</span></p>
                         </div>
-                        <p className="green-text underlined">Show More...</p>
-                        {/* onClick - student-performance-container.style.display === "flex" ? student-performance-container.style.display = "none" */}
+                        <p className="green-text underlined" onClick={() => setShowMore(!showMore)} >{ showMore ? "Show Less..." : "Show More..." }</p>
                     </div>
                 </div>
                
