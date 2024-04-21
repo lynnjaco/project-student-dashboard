@@ -52,7 +52,7 @@
 }
 
 .student-performance-container {
-    display: none;
+    display: flex;
     flex-direction: row;
     margin-top: 0;
 
