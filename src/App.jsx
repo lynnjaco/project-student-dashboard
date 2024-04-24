@@ -22,7 +22,7 @@ function App() {
             setStudentList={ setStudentList } />
         </div>
         <div className="students-container">
-          <CohortStudentCount students={ data } />
+          <CohortStudentCount students={ studentList } />
           <StudentList
             students={ studentList } />
         </div>
