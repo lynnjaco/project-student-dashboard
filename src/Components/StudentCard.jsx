@@ -22,6 +22,10 @@ export const StudentCard = ( { student } ) => {
         return formattedDate;
     }
 
+    function trackGraduate(studentObj) {
+        return studentObj.certifications.resume && studentObj.certifications.linkedin && studentObj.certifications.github && studentObj.certifications.mockInterview && studentObj.codewars.current.total > 600; 
+    }
+
     const [showMore, setShowMore] = useState(false);
     
     return (
@@ -37,7 +41,9 @@ export const StudentCard = ( { student } ) => {
                             <p>{ student.username }</p>
                             <p className="green-text">Birthday: <span>{ formatDate(student.dob) }</span></p>
                         </div>
-                        <p className="green-text underlined" onClick={() => setShowMore(!showMore)} >{ showMore ? "Show Less..." : "Show More..." }</p>
+                    </div>
+                    <div className="track-grad-container">
+                        <p className="green-text">{ trackGraduate(student) ? "On Track To Graduate" : "Not On Track To Graduate" }</p>
                     </div>
                 </div>
                
@@ -93,7 +99,6 @@ export const StudentCard = ( { student } ) => {
                         </div>
                     </div> ) 
                     }
-
             </div>
         </li>
     )
